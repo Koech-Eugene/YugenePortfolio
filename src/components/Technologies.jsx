@@ -47,7 +47,7 @@ function Technologies() {
     ]
   return (
     <>
-      <section name="tech" className="bg-gradient-to-b from-gray-900 to to-black w-full h-screen">
+      <section name="technologies" className="bg-gradient-to-b from-gray-900 to to-black w-full h-screen">
         <div className="mx-w-screen-lg mx-auto p-4 flex flex-col justify-center w-full h-full text-gray-200">
             <div>
                 <p className="text-3xl font-bold border-b-4 border-gray-500 p-2 inline">Tech Stack</p>

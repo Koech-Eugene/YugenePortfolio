@@ -1,12 +1,13 @@
 import React from "react";
 import image from "../assets/Eugene.jpg";
 import { FaArrowDown, FaArrowRight } from "react-icons/fa6";
+import { Link } from "react-scroll";
 
 function Hero() {
   return (
     <>
       <section
-        name="hero"
+        name="home"
         className="h-screen w-full bg-gradient-to-b from-black via-black to-gray-800"
       >
         <div className="max-w-screen-lg flex flex-col items-center justify-center h-full px-4 md:flex-row">
@@ -20,12 +21,12 @@ function Hero() {
               world.
             </p>
             <div>
-              <button className="text-white w-fit px-6 py-2 rounded flex items-center bg-red-500 hover:-translate-y-0.5">
-                Porfolio{" "}
+              <Link to="technologies" smooth duration={500} className="text-white w-fit px-6 py-2 rounded flex items-center bg-red-500 hover:-translate-y-0.5">
+                Technologies{" "}
                 <span className="ml-2 hover:translate-y-1 duration-200">
                   <FaArrowDown />
                 </span>
-              </button>
+              </Link>
             </div>
           </div>
           {/* <div>

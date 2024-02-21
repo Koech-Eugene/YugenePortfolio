@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { IoMenu, IoClose } from "react-icons/io5";
+import { Link } from "react-scroll";
 
 function Navbar() {
   const [nav, setNave] = useState(false);
@@ -13,16 +14,13 @@ function Navbar() {
       id: 2,
       link: "about",
     },
+   
     {
       id: 3,
-      link: "portfoio",
-    },
-    {
-      id: 4,
       link: "technologies",
     },
     {
-      id: 5,
+      id: 4,
       link: "contact",
     },
   ];
@@ -31,16 +29,18 @@ function Navbar() {
     <header>
       <nav className="flex justify-between items-center w-full h-20 bg-black text-white fixed">
         <div>
+          <Link to="home" smooth duration={500}>
           <h1 className="text-3xl">Eugene</h1>
+          </Link>
         </div>
         <div>
           <ul className="hidden md:flex">
             {links.map(({ id, link }) => (
               <li
                 key={id}
-                className="cursor-pointer px-4 font-semibold text-gray-600 hover:text-red-500 hover:scale-110 duration-200 capitalize"
+                className="cursor-pointer px-4 capitalize font-semibold text-gray-600 hover:text-red-500 hover:scale-110 duration-200 "
               >
-                {link}
+                <Link to={link} smooth duration={500}>{link}</Link>
               </li>
             ))}
           </ul>
@@ -56,9 +56,9 @@ function Navbar() {
             {links.map(({ id, link }) => (
               <li
                 key={id}
-                className="px-4 cursor-pointer capitalize py-3 text-2xl"
+                className="px-4 cursor-pointer py-3 text-2xl capitalize"
               >
-                {link}
+                <Link to={link} smooth duration={500}>{link}</Link>
               </li>
             ))}
           </ul>
