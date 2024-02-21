@@ -1,6 +1,5 @@
 import React from "react";
-import image from "../assets/Eugene.jpg";
-import { FaArrowDown, FaArrowRight } from "react-icons/fa6";
+import { FaArrowDown } from "react-icons/fa6";
 import { Link } from "react-scroll";
 
 function Hero() {
